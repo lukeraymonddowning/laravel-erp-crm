@@ -55,7 +55,7 @@
             ]
         },
         "laravel-erp": {
-            "installer": "JustSteveKing\\Laravel\\ERP\\CRM\\CRMServiceProvider"
+            "installer": "JustSteveKing\\Laravel\\ERP\\CRM\\ModuleInstaller"
         }
     },
     "minimum-stability": "dev",

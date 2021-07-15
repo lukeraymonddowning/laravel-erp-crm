@@ -4,24 +4,22 @@ declare(strict_types=1);
 
 namespace JustSteveKing\Laravel\ERP\CRM;
 
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Log;
 use JustSteveKing\Laravel\ERPContracts\Module\InstallerContract;
 use Symfony\Component\Process\ExecutableFinder;
 use Symfony\Component\Process\Process;
-use Throwable;
 
 class ModuleInstaller implements InstallerContract
 {
     public function install(): void
     {
         $process = new Process([
-            (new ExecutableFinder)->find(
+            (new ExecutableFinder())->find(
                 name: 'php',
                 default: 'php',
             ),
             'artisan',
-            'vendor:publish --provider="JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider" --tag="laravel-erp-crm-migrations"'
+            'vendor:publish --provider="JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider" --tag="laravel-erp-crm-migrations"',
         ]);
 
         $process->mustRun();

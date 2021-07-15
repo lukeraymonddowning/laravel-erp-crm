@@ -43,10 +43,7 @@
     "scripts": {
         "psalm": "vendor/bin/psalm",
         "test": "./vendor/bin/testbench package:test --parallel --no-coverage",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
-        "post-install-cmd": [
-            "@php artisan vendor:publish --provider=\"JustSteveKing\\Laravel\\ERP\\CRM\\CRMServiceProvider\" --tag=\"laravel-erp-crm-migrations\""
-        ]
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     },
     "config": {
         "sort-packages": true

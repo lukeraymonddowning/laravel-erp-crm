@@ -19,4 +19,11 @@ class CRMServiceProvider extends PackageServiceProvider
                 'create_erp_crm_links_table',
             );
     }
+
+    public function boot(): void
+    {
+        parent::boot();
+
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
+    }
 }

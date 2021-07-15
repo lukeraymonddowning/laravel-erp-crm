@@ -1,24 +1,25 @@
 {
-    "name": "vendor_slug/package_slug",
-    "description": ":package_description",
+    "name": "juststeveking/laravel-erp-crm",
+    "description": "A Laravel ERP Module providing CRM functionality",
     "keywords": [
-        ":vendor_name",
+        "JustSteveKing",
         "laravel",
-        "package_slug"
+        "laravel-erp-crm"
     ],
-    "homepage": "https://github.com/vendor_slug/package_slug",
+    "homepage": "https://github.com/juststeveking/laravel-erp-crm",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Steve McDougall",
+            "email": "juststevemcd@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^8.0",
-        "spatie/laravel-package-tools": "^1.4.3",
-        "illuminate/contracts": "^8.37"
+        "illuminate/contracts": "^8.37",
+        "juststeveking/laravel-erp-contracts": "dev-main",
+        "spatie/laravel-package-tools": "^1.4.3"
     },
     "require-dev": {
         "brianium/paratest": "^6.2",
@@ -30,13 +31,13 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories"
+            "JustSteveKing\\Laravel\\ERP\\CRM\\": "src",
+            "JustSteveKing\\Laravel\\ERP\\CRM\\Database\\Factories\\": "database/factories"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests"
+            "JustSteveKing\\Laravel\\ERP\\CRM\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -50,11 +51,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
-            ],
-            "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\SkeletonFacade"
-            }
+                "JustSteveKing\\Laravel\\ERP\\CRM\\CRMServiceProvider"
+            ]
+        },
+        "laravel-erp": {
+            "installer": "JustSteveKing\\Laravel\\ERP\\CRM\\CRMServiceProvider"
         }
     },
     "minimum-stability": "dev",

@@ -1,6 +1,6 @@
 <?php
 
-namespace VendorName\Skeleton\Tests;
+namespace JustSteveKing\Laravel\ERP\CRM\Tests;
 
 class ExampleTest extends TestCase
 {

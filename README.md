@@ -17,13 +17,13 @@ composer require juststeveking/laravel-erp-crm
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --provider="Juststeveking\CRM\CRMServiceProvider" --tag="laravel-erp-crm-migrations"
+php artisan vendor:publish --provider="JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider" --tag="laravel-erp-crm-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 ```bash
-php artisan vendor:publish --provider="Juststeveking\CRM\CRMServiceProvider" --tag="laravel-erp-crm-config"
+php artisan vendor:publish --provider="JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider" --tag="laravel-erp-crm-config"
 ```
 
 This is the contents of the published config file:

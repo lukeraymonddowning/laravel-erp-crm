@@ -31,7 +31,7 @@ class Contact extends Model
         'job_title',
         'department',
         'birthday',
-        'company_id'
+        'company_id',
     ];
 
     public function company(): BelongsTo

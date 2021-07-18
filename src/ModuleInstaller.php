@@ -14,12 +14,18 @@ class ModuleInstaller implements InstallerContract
     {
         Artisan::call(
             command: "vendor:publish",
-            parameters:['--tag'=>'erp-crm-migrations']
+            parameters: [
+                '--tag' => 'erp-crm-migrations',
+                '--provider' => 'JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider'
+            ]
         );
 
         Artisan::call(
             command: "vendor:publish",
-            parameters:['--tag'=>'erp-crm-config']
+            parameters: [
+                '--tag' => 'erp-crm-config',
+                '--provider' => 'JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider'
+            ]
         );
         
         Log::info(

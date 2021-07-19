@@ -16,7 +16,7 @@ class ModuleInstaller implements InstallerContract
             command: "vendor:publish",
             parameters: [
                 '--tag' => 'erp-crm-migrations',
-                '--provider' => 'JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider'
+                '--provider' => 'JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider',
             ]
         );
 
@@ -24,10 +24,10 @@ class ModuleInstaller implements InstallerContract
             command: "vendor:publish",
             parameters: [
                 '--tag' => 'erp-crm-config',
-                '--provider' => 'JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider'
+                '--provider' => 'JustSteveKing\Laravel\ERP\CRM\CRMServiceProvider',
             ]
         );
-        
+
         Log::info(
             message: 'Installing module juststeveking/laravel-erp-crm',
         );
